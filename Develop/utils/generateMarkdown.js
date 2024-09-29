@@ -20,7 +20,7 @@ function generateMarkdown(data) {
   # ${data.title}
 
   ## Description
-  # ${data.description}
+  ${data.description}
 
   ## Table of Contents
    [Installation](#installation)
@@ -31,19 +31,19 @@ function generateMarkdown(data) {
    [Questions](#questions)
 
    ## Installation
-  ${data.installation}
+   ${data.installation}
 
    ## Usage
-  ${data.usage}
+   ${data.usage}
 
    ## License
-  ${renderLicenseSection(data.license)}
+   ${renderLicenseSection(data.license)}
 
    ## Contributing 
-  ${data.contributing}
+   ${data.contributing}
 
    ## Tests
-  ${data.tests}
+   ${data.tests}
 
    ## Questions
    Email: ${data.email}
