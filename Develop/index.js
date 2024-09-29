@@ -1,33 +1,60 @@
 // Packages needed for this application
 import fs from 'fs';
 import inquirer from 'inquirer';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 // User questions
 const questions = [
     {
         type: 'input',
-        name: 'name',
-        message: 'What is your name?',
+        name: 'title',
+        message: 'What is the title of your project?',
     },
     {
         type: 'input',
-        name: 'age',
-        message: 'How old are you?',
+        name: 'description',
+        message: 'Please provide a description of your project.',
     },
     {
         type: 'input',
-        name: 'Github',
+        name: 'installation',
+        message: 'What are the steps required to install your project?',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Provide instructions and examples for use.',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Please provide the license for your project.',
+        choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Please provide guidelines for contributing to your project.',
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Please provide your contact information for any questions.',
+    }, 
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
+    {
+        type: 'input',
+        name: 'github',
         message: 'What is your Github username?',
     },
     {
         type: 'input',
-        name: 'Pet',
-        message: 'Do you have any pets?',
-    },
-    {
-        type: 'input',
-        name: 'FavoriteColor',
-        message: 'What is your favorite color?',
+        name: 'linkedin',
+        message: 'What is your LinkedIn username?',
     },
 ];
 
@@ -45,7 +72,7 @@ function writeToFile(fileName, data) {
 // Function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        const data = JSON.stringify(answers, null, 2);
+        const data = generateMarkdown(answers);
         writeToFile('README.md', data);
     }).catch((error) => {
         console.error('Error initializing app:', error);
