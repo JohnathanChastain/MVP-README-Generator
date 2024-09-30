@@ -38,28 +38,18 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'Please provide your contact information for any questions.',
-    }, 
-    {
-        type: 'input',
         name: 'tests',
         message: 'Please provide examples on how to run tests on your project.',
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?',
+        message: 'Please provide your email address.',
     },
     {
         type: 'input',
         name: 'github',
-        message: 'What is your Github username?',
-    },
-    {
-        type: 'input',
-        name: 'linkedin',
-        message: 'What is your LinkedIn username?',
+        message: 'Please provide your GitHub username.',
     },
 ];
 
