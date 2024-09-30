@@ -10,6 +10,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  console.log(license);
     if (license === 'MIT') {
         return '[MIT](https://opensource.org/licenses/MIT)';
     } else if (license === 'Apache 2.0') {
@@ -26,14 +27,16 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-    return `## License
-    ${renderLicenseBadge(license)}
-    This project is licensed under the ${license} license. Please see function ${renderLicenseLink(license)}
-     for more information.`;
+    return `
+${renderLicenseBadge(license)}
+
+This project is licensed under the ${license} license. Please see ${renderLicenseLink(license)}
+for more information.`;
 }
 
 //function to generate markdown for README
 function generateMarkdown(data) {
+  const license = renderLicenseSection(data.license);
   return `
   # ${data.title}
 
@@ -55,7 +58,7 @@ function generateMarkdown(data) {
    ${data.usage}
 
    ## License
-   ${renderLicenseSection(data.license)}
+   ${license}
 
 
    ## Contributing 
