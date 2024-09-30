@@ -28,10 +28,10 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     return `
-${renderLicenseBadge(license)}
+  ${renderLicenseBadge(license)}
 
-This project is licensed under the ${license} license. Please see ${renderLicenseLink(license)}
-for more information.`;
+  This project is licensed under the ${license} license. Please see ${renderLicenseLink(license)}
+  for more information.`;
 }
 
 //function to generate markdown for README
