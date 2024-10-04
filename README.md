@@ -18,7 +18,7 @@
    ## Usage
    After installation, run `node index.js` in the terminal and follow the prompts. Once the prompts are successfully filled the application will create a README.md file in your project.
    
-   Click the image below to view example. 
+   Click the image below or visit this [link](https://drive.google.com/file/d/1awsAuUNo3xgpzTDm8dO1kOKUkcTCXNUv/view?usp=sharing) to view example. 
   
   [<img src="./MVPs.png" width="50%">](https://drive.google.com/file/d/1awsAuUNo3xgpzTDm8dO1kOKUkcTCXNUv/preview "Now in Android: 55")
    <!-- [![Watch the video](./MVPs.png)](https://drive.google.com/file/d/1awsAuUNo3xgpzTDm8dO1kOKUkcTCXNUv/preview) -->
